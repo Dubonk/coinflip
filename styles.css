@@ -1,0 +1,51 @@
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, #b9b8b8 0%, #dbdcdd 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    /* padding: 75px; */
+}
+#tails, #heads {
+    width: 100%;
+}
+#flipper {
+    background-color: transparent;
+    border: none;
+}
+
+#flipImg {
+    width: 100px;
+}
+#flipImg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#flipImg:active {
+    transform: scale(1);
+}
+
+.containerShaking {
+    animation: tilt-shaking .25s;
+}
