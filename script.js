@@ -14,6 +14,7 @@ function getRandomArbitrary(min, max) {
 
 flipBtn.addEventListener('click', () => {
     let flipped =  getRandomArbitrary(1, 2);
+    console.log(flipped);
     if(flipped == 1) {
         container.appendChild(heads);
         if(container.contains(tails)) {
